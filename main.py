@@ -7,12 +7,12 @@ load_dotenv()
 llm = OpenAI()
 chat_model = ChatOpenAI(model="gpt-3.5-turbo")
 
-text = "What is a creative name for a mythology based escape room?"
-system_text = "You are a sarcastic bot"
+system_text = "You are a sarcastic bot who gives helpful advice nevertheless"
+user_text = "What is a creative name for a mythology based escape room?"
 
 messages = [
   SystemMessage(content=system_text),
-  HumanMessage(content=text),
+  HumanMessage(content=user_text),
 ]
 
 response_llm = llm.invoke(messages)
